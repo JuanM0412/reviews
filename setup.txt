@@ -11,3 +11,5 @@ To run this web application, you will need to follow the instructions below:
     and open your browser and search for the URL displayed by the command.
 
 4. Now you can browse and test the page!
+
+IMPORTANT! To run this project you will need PHP 8.2.4, if you don't know your PHP version you can run php --version

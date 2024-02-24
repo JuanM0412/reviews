@@ -23,12 +23,6 @@
                 </div>
             </div>
         </nav>
-        <header class="masthead text-white text-center py-4" style="background-color: #06d6a0;">
-            <div class="container d-flex align-items-center flex-column">
-                <h2>@yield('subtitle', 'Workshop 1')</h2>
-            </div>
-        </header>
-        <!-- header -->
         <div class="container my-4">
             @yield('content')
         </div>

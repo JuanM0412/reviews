@@ -12,7 +12,6 @@ class ReviewController extends Controller
     {
         $viewData = [];
         $viewData['title'] = 'Reviews';
-        $viewData['subtitle'] = 'List of reviews';
         $viewData['reviews'] = Review::all();
 
         return view('review.index')->with('viewData', $viewData);
@@ -23,7 +22,7 @@ class ReviewController extends Controller
         $viewData = [];
         $review = Review::findOrFail($id);
         $viewData['title'] = 'Review';
-        $viewData['subtitle'] = 'Review '.$review['id'];
+        $viewData['card'] = 'Review '.$review['id'];
         $viewData['review'] = $review;
 
         return view('review.show')->with('viewData', $viewData);

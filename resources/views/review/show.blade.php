@@ -1,10 +1,9 @@
 @extends('layouts.app')
 @section('title', $viewData["title"])
-@section('subtitle', $viewData["subtitle"])
 @section('content')
 <div class="card">
         <div class="card-body">
-            <h5 class="card-title">{{ $viewData["subtitle"] }}</h5>
+            <h5 class="card-title">{{ $viewData["card"] }}</h5>
             <p class="card-text"><strong>ID:</strong> {{ $viewData["review"]["id"] }}</p>
             <p class="card-text"><strong>Description:</strong> {{ $viewData["review"]["description"] }}</p>
             <p class="card-text"><strong>Rating:</strong> {{ $viewData["review"]["rating"] }}</p>
