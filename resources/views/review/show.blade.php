@@ -2,16 +2,15 @@
 @section('title', $viewData["title"])
 @section('subtitle', $viewData["subtitle"])
 @section('content')
-<div class="card mb-3">
-    <div class="row g-0">
-        <div class="col-md-8">
-            <div class="card-body">
-                <p class="card-text">{{ $viewData["review"]["id"] }}</p>
-                <h5 class="card-title">
-                    {{ $viewData["review"]["description"] }}
-                </h5>
-                <p class="card-text">Rating: {{ $viewData["review"]["rating"] }}</p>
-                <p class="card-text">Created at: {{ $viewData["review"]["created_at"] }}</p>
+<div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{ $viewData["subtitle"] }}</h5>
+            <p class="card-text"><strong>ID:</strong> {{ $viewData["review"]["id"] }}</p>
+            <p class="card-text"><strong>Description:</strong> {{ $viewData["review"]["description"] }}</p>
+            <p class="card-text"><strong>Rating:</strong> {{ $viewData["review"]["rating"] }}</p>
+            <p class="card-text"><strong>Created at:</strong> {{ $viewData["review"]["created_at"] }}</p>
+            <div class="text-center">
+                <a href="{{ route('review.delete', ['id'=> $viewData["review"]["id"]]) }}" class="btn bg-primary text-white">Delete review</a>
             </div>
         </div>
     </div>

@@ -1,25 +1,8 @@
-bg-secondary {
-    background-color: #048a81 !important;
-}
-
-.copyright {
-    background-color: #772E25;
-}
-
-.bg-primary {
-    background-color: #254D32 !important;
-}
-
 nav{
     font-weight: 700;
-    background: #283D3B !important;
+    background: #2D3A3A !important;
 }
 
 header{
-    background: #197278 !important;
-}
-
-.img-card{
-    height: 18vw;
-    object-fit: cover;
+    background: #035E7B !important;
 }

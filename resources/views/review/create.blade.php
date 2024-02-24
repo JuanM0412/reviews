@@ -11,14 +11,14 @@
                             <ul id="errors" class="alert alert-danger list-unstyled">
                                 @foreach($errors->all() as $error)
                                     <li>{{ $error }}</li>
-                                    @endforeach
+                                @endforeach
                             </ul>
                         @endif
 
                         <form method="POST" action="{{ route('review.save') }}">
                             @csrf
                             <textarea class="form-control mb-2" placeholder="Enter description" name="description" value="{{ old('description') }}"></textarea>
-                            <input type="numeric" class="form-control mb-2" placeholder="Enter rating" name="rating" value="{{ old('review') }}"/>
+                            <input type="numeric" class="form-control mb-2" placeholder="Enter rating (between 0 and 5)" name="rating" value="{{ old('review') }}"/>
                             <input type="submit" class="btn btn-primary" value="Send" />
                         </form>
                     </div>

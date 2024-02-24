@@ -33,14 +33,5 @@
             @yield('content')
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <!-- footer -->
-        <div class="copyright py-4 text-center text-white">
-            <div class="container">
-                <small>
-                    <a class="text-reset fw-bold text-decoration-none" target="_blank" href="https://github.com/JuanM0412"> Juan Manuel Gómez </a>
-                </small>
-            </div>
-        </div>
-        <!-- footer -->
     </body>
 </html>

@@ -31,7 +31,7 @@ class ReviewController extends Controller
 
     public function create(): View
     {
-        $viewData = []; //to be sent to the view
+        $viewData = [];
         $viewData['title'] = 'Create review';
 
         return view('review.create')->with('viewData', $viewData);
@@ -41,11 +41,23 @@ class ReviewController extends Controller
     {
         $request->validate([
             'description' => 'required',
-            'rating' => ['required', 'gt:0'],
+            'rating' => ['required', 'gt:0', 'lt:6'],
         ]);
 
-        Review::create($request->only(['description', 'rating']));
+        $review = Review::create($request->only(['description', 'rating']));
 
-        return back();
+        $request->session()->flash('message', 'Review with ID '.$review->id.' has been succesfully created.');
+
+        return redirect()->route('review.index');
+    }
+
+    public function delete($id): \Illuminate\Http\RedirectResponse
+    {
+        $post = Review::find($id);
+        $post->delete();
+
+        session()->flash('message', 'Review with ID '.$id.' has been succesfully removed.');
+
+        return redirect()->route('review.index');
     }
 }
