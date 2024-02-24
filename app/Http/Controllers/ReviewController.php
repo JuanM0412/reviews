@@ -22,8 +22,8 @@ class ReviewController extends Controller
     {
         $viewData = [];
         $review = Review::findOrFail($id);
-        $viewData['title'] = 'Review - '.$review['id'];
-        $viewData['subtitle'] = $review['name'].' - Review information';
+        $viewData['title'] = 'Review';
+        $viewData['subtitle'] = 'Review '.$review['id'];
         $viewData['review'] = $review;
 
         return view('review.show')->with('viewData', $viewData);
