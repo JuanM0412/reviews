@@ -7,7 +7,7 @@
         <div class="col-md-4 col-lg-3 mb-2">
             <div class="card">
                 <div class="card-body text-center">
-                    <a href="{{ route('review.show', ['id'=> $review["id"]]) }}" class="btn bg-primary text-white">{{ $review["name"] }}</a>
+                    <a href="{{ route('review.show', ['id'=> $review["id"]]) }}" class="btn bg-primary text-white">{{ $review["description"] }}</a>
                 </div>
             </div>
         </div>

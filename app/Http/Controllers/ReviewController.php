@@ -28,4 +28,24 @@ class ReviewController extends Controller
 
         return view('review.show')->with('viewData', $viewData);
     }
+
+    public function create(): View
+    {
+        $viewData = []; //to be sent to the view
+        $viewData['title'] = 'Create review';
+
+        return view('review.create')->with('viewData', $viewData);
+    }
+
+    public function save(Request $request): \Illuminate\Http\RedirectResponse
+    {
+        $request->validate([
+            'description' => 'required',
+            'rating' => ['required', 'gt:0'],
+        ]);
+
+        Review::create($request->only(['description', 'rating']));
+
+        return back();
+    }
 }

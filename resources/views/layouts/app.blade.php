@@ -17,7 +17,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ms-auto">
-                        <a class="nav-link active">Create review</a>
+                        <a class="nav-link active" href="{{ route('review.create') }}">Create review</a>
                         <a class="nav-link active" href="{{ route('review.index') }}">Show reviews</a>
                     </div>
                 </div>
